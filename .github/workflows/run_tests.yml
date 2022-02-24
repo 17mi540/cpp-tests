@@ -1,0 +1,11 @@
+name: Run-tests
+on: [push]
+jobs:
+  run-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: mkdir build
+      - run: cd build
+      - run: cmake ..
+      - run: make
+      - run: ./mytests
